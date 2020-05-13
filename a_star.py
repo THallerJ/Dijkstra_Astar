@@ -7,8 +7,8 @@ class AStar:
         queue = PriorityQueue()
         node_count = 0
 
-        start_key = str(start_x) + str(start_y)
-        goal_key = str(goal_x) + str(goal_y)
+        start_key = start_x + start_y
+        goal_key = goal_x + goal_y
 
         curr_node = node_map.get(start_key)
         curr_node.cost = 0  # The cost of the starting node is 0.

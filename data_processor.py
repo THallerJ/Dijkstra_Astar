@@ -22,22 +22,22 @@ class DataProcessor:
                 key1 = road_string_data[1] + road_string_data[2]
                 key2 = road_string_data[3] + road_string_data[4]
 
-                # if a Intersection already exists in the dictionary with temp_road's starting coordinates
-                # then add temp_road to the Intersection.
+                # if a Node already exists in the dictionary with temp_road's starting coordinates
+                # then add temp_road to the Node.
                 if key1 in node_map.keys():
                     node_map.get(key1).add_road(temp_road)
-                # Otherwise create a new Intersection and add it to the dictionary.
+                # Otherwise create a new Node and add it to the dictionary.
                 else:
                     node_map[key1] = Node(road_string_data[1], road_string_data[2])
                     node_map.get(key1).add_road(temp_road)
 
-                # if a Intersection already exists in the dictionary with temp_road's starting coordinates
-                # then add temp_road to the Intersection.
+                # if a Node already exists in the dictionary with temp_road's starting coordinates
+                # then add temp_road to the Node.
                 if key2 in node_map.keys():
                     node_map.get(key2).add_road(temp_road)
-                    # Otherwise create a new Intersection and add it to the dictionary.
+                    # Otherwise create a new Node and add it to the dictionary.
                 else:
-                    # Otherwise create a new Intersection and add it to the dictionary.
+                    # Otherwise create a new Node and add it to the dictionary.
                     node_map[key2] = Node(road_string_data[3], road_string_data[4])
                     node_map.get(key2).add_road(temp_road)
 
