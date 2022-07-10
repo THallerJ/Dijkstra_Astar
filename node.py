@@ -15,8 +15,8 @@ class Node:
     # Use with A*
     def calculate_heuristic(self, goal_x, goal_y):
         return math.sqrt(
-            (int(self.x_coord) - goal_x) ** 2
-            + (int(self.y_coord) - goal_y) ** 2)
+            (int(self.x_coord) - int(goal_x)) ** 2
+            + (int(self.y_coord) - int(goal_y)) ** 2)
 
     def coordinates(self):
         return self.x_coord + self.y_coord
